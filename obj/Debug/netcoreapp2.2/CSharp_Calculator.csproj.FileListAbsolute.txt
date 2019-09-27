@@ -1,0 +1,11 @@
+D:\Users\mlegesse\Documents\projects\Github.com\MatrixMatt\CSharp_Calculator\bin\Debug\netcoreapp2.2\CSharp_Calculator.deps.json
+D:\Users\mlegesse\Documents\projects\Github.com\MatrixMatt\CSharp_Calculator\bin\Debug\netcoreapp2.2\CSharp_Calculator.runtimeconfig.json
+D:\Users\mlegesse\Documents\projects\Github.com\MatrixMatt\CSharp_Calculator\bin\Debug\netcoreapp2.2\CSharp_Calculator.runtimeconfig.dev.json
+D:\Users\mlegesse\Documents\projects\Github.com\MatrixMatt\CSharp_Calculator\bin\Debug\netcoreapp2.2\CSharp_Calculator.dll
+D:\Users\mlegesse\Documents\projects\Github.com\MatrixMatt\CSharp_Calculator\bin\Debug\netcoreapp2.2\CSharp_Calculator.pdb
+D:\Users\mlegesse\Documents\projects\Github.com\MatrixMatt\CSharp_Calculator\obj\Debug\netcoreapp2.2\CSharp_Calculator.csprojAssemblyReference.cache
+D:\Users\mlegesse\Documents\projects\Github.com\MatrixMatt\CSharp_Calculator\obj\Debug\netcoreapp2.2\CSharp_Calculator.csproj.CoreCompileInputs.cache
+D:\Users\mlegesse\Documents\projects\Github.com\MatrixMatt\CSharp_Calculator\obj\Debug\netcoreapp2.2\CSharp_Calculator.AssemblyInfoInputs.cache
+D:\Users\mlegesse\Documents\projects\Github.com\MatrixMatt\CSharp_Calculator\obj\Debug\netcoreapp2.2\CSharp_Calculator.AssemblyInfo.cs
+D:\Users\mlegesse\Documents\projects\Github.com\MatrixMatt\CSharp_Calculator\obj\Debug\netcoreapp2.2\CSharp_Calculator.dll
+D:\Users\mlegesse\Documents\projects\Github.com\MatrixMatt\CSharp_Calculator\obj\Debug\netcoreapp2.2\CSharp_Calculator.pdb
