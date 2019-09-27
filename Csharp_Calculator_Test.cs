@@ -27,6 +27,16 @@ namespace CSharp_Calculator
 
         }
         [Fact]
+        public void Add_Simple_Comma_Delimiter_Test_Invalid_Numbers_Missing_Numbers(){
+
+            int expected = 20;
+
+            int actual = Program.Simple_Comma_Delimiter("20,,abcde");
+
+            Assert.Equal(expected,actual);
+
+        }
+        [Fact]
         public void Add_Simple_Comma_Delimiter_Test_New_Line(){
 
             int expected = 50;
