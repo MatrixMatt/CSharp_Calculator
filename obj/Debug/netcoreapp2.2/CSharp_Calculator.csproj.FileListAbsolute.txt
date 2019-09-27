@@ -9,3 +9,8 @@ D:\Users\mlegesse\Documents\projects\Github.com\MatrixMatt\CSharp_Calculator\obj
 D:\Users\mlegesse\Documents\projects\Github.com\MatrixMatt\CSharp_Calculator\obj\Debug\netcoreapp2.2\CSharp_Calculator.AssemblyInfo.cs
 D:\Users\mlegesse\Documents\projects\Github.com\MatrixMatt\CSharp_Calculator\obj\Debug\netcoreapp2.2\CSharp_Calculator.dll
 D:\Users\mlegesse\Documents\projects\Github.com\MatrixMatt\CSharp_Calculator\obj\Debug\netcoreapp2.2\CSharp_Calculator.pdb
+D:\Users\mlegesse\Documents\projects\Github.com\MatrixMatt\CSharp_Calculator\bin\Debug\netcoreapp2.2\testhost.exe
+D:\Users\mlegesse\Documents\projects\Github.com\MatrixMatt\CSharp_Calculator\bin\Debug\netcoreapp2.2\testhost.dll
+D:\Users\mlegesse\Documents\projects\Github.com\MatrixMatt\CSharp_Calculator\bin\Debug\netcoreapp2.2\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+D:\Users\mlegesse\Documents\projects\Github.com\MatrixMatt\CSharp_Calculator\bin\Debug\netcoreapp2.2\xunit.runner.reporters.netcoreapp10.dll
+D:\Users\mlegesse\Documents\projects\Github.com\MatrixMatt\CSharp_Calculator\bin\Debug\netcoreapp2.2\xunit.runner.utility.netcoreapp10.dll
