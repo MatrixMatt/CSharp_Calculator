@@ -1,4 +1,7 @@
 using Xunit;
+using System;
+
+
 namespace CSharp_Calculator
 {
     public class Csharp_Calculator_Test
@@ -8,7 +11,7 @@ namespace CSharp_Calculator
 
             int expected = 25;
 
-            int actual = Program.SimpleCommaDelimiter("20,5");
+            int actual = Program.Simple_Comma_Delimiter("20,5");
 
             Assert.Equal(expected,actual);
 
@@ -18,7 +21,7 @@ namespace CSharp_Calculator
 
             int expected = 20;
 
-            int actual = Program.SimpleCommaDelimiter("20,abcde");
+            int actual = Program.Simple_Comma_Delimiter("20,abcde");
 
             Assert.Equal(expected,actual);
 
@@ -28,7 +31,7 @@ namespace CSharp_Calculator
 
             int expected = 50;
 
-            int actual = Program.SimpleCommaDelimiter("20\n20,10");
+            int actual = Program.Simple_Comma_Delimiter("20\n20,10");
 
             Assert.Equal(expected,actual);
 
@@ -38,7 +41,7 @@ namespace CSharp_Calculator
 
             int expected = 20;
 
-            int actual = Program.SimpleCommaDelimiter("20");
+            int actual = Program.Simple_Comma_Delimiter("20");
 
             Assert.Equal(expected,actual);
 
@@ -48,19 +51,17 @@ namespace CSharp_Calculator
 
             int expected = 30;
 
-            int actual = Program.SimpleCommaDelimiter("20,1001,10");
+            int actual = Program.Simple_Comma_Delimiter("20,1001,10");
 
             Assert.Equal(expected,actual);
 
         }
-        // [Fact]
-        // public void Add_Simple_Comma_Delimiter_Test_Numbers_Negative_Numbers(){
+        [Fact]
+        public void Add_Simple_Comma_Delimiter_Test_Numbers_Negative_Numbers(){
 
             
-        //     var exception = Assert.Throws<InvalidOperationException>(() => Program.SimpleCommaDelimiter("20,1001,-10"));
-
-        //     Assert.Equal("Could not calculate due to negative number",exception);
-
-        // }
+            Action act = () => Program.Simple_Comma_Delimiter("20,1001,-10");
+            Assert.Throws<ArgumentException>(act);
+        }
     }
 }
