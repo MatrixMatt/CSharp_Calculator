@@ -21,9 +21,9 @@ namespace CSharp_Calculator
         {
 
 
-            string expected = "11***22***33";
+            string expected = "11***22***33\n11";
 
-            string actual = Utility.Custom_Delimiter_Number_String_value("[***]\n11***22***33");
+            string actual = Utility.Custom_Delimiter_Number_String_value("[***]\n11***22***33\n11");
 
             Assert.Equal(expected, actual);
         }
@@ -72,17 +72,18 @@ namespace CSharp_Calculator
             Assert.Equal(expected, actual);
 
         }
-        // [Fact]
-        // public void Add_Custom_Delimiter_Test_New_Line()
-        // {
+        
+        [Fact]
+        public void Add_Custom_Delimiter_Test_New_Line()
+        {
 
-        //     int expected = 50;
+            int expected = 54;
 
-        //     int actual = Program.Custom_Delimiter("20\n20,10");
+            int actual = Program.Custom_Delimiter("//[***]\n11***ascf***33\n10");
 
-        //     Assert.Equal(expected, actual);
+            Assert.Equal(expected, actual);
 
-        // }
+        }
         [Fact]
         public void Add_Custom_Delimiter_Test_With_Missing_Numbers()
         {
@@ -111,6 +112,80 @@ namespace CSharp_Calculator
 
 
             Action act = () => Program.Custom_Delimiter("//[***]\n11***22***-33");
+            Assert.Throws<ArgumentException>(act);
+        }
+        [Fact]
+        public void Add_Custom_Multi_Delimiter_Test()
+        {
+
+            int expected = 110;
+
+            int actual = Program.Custom_Delimiter("//[*][!!][r9r]\n11r9r22*33!!44");
+
+            Assert.Equal(expected, actual);
+
+        }
+        [Fact]
+        public void Add_Custom_Multi_Delimiter_Test_Invalid_Numbers()
+        {
+
+            int expected = 77;
+
+            int actual = Program.Custom_Delimiter("//[*][!!][r9r]\n11r9r22*abcd!!44");
+
+            Assert.Equal(expected, actual);
+
+        }
+        [Fact]
+        public void Add_Custom_Multi_Delimiter_Test_Invalid_Numbers_Missing_Numbers()
+        {
+
+            int expected = 77;
+
+            int actual = Program.Custom_Delimiter("//[*][!!][r9r]\n11r9r22*!!44");
+
+            Assert.Equal(expected, actual);
+
+        }
+        [Fact]
+        public void Add_Custom_Multi_Delimiter_Test_New_Line()
+        {
+
+            int expected = 120;
+
+            int actual = Program.Custom_Delimiter("//[*][!!][r9r]\n11r9r22*33!!44\n10");
+
+            Assert.Equal(expected, actual);
+
+        }
+         [Fact]
+        public void Add_Custom_Multi_Delimiter_Test_With_Missing_Numbers()
+        {
+
+            int expected = 11;
+
+            int actual = Program.Custom_Delimiter("//[*][!!][r9r]\n11");
+
+            Assert.Equal(expected, actual);
+
+        }
+        [Fact]
+        public void Add_Custom_Multi_Delimiter_Test_Numbers_Greater_Than_OneThousand()
+        {
+
+            int expected = 77;
+
+            int actual = Program.Custom_Delimiter("//[*][!!][r9r]\n11r9r22*1001!!44");
+
+            Assert.Equal(expected, actual);
+
+        }
+        [Fact]
+        public void Add_Custom_Multi_Delimiter_Test_Numbers_Negative_Numbers()
+        {
+
+
+            Action act = () => Program.Custom_Delimiter("//[*][!!][r9r]\n11r9r22*-33!!44");
             Assert.Throws<ArgumentException>(act);
         }
     }
