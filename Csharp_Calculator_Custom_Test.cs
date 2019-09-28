@@ -43,9 +43,9 @@ namespace CSharp_Calculator
         public void Add_Custom_Delimiter_Test()
         {
 
-            int expected = 25;
+            int expected = 66;
 
-            int actual = Program.Custom_Delimiter("20,5");
+            int actual = Program.Custom_Delimiter("//[***]\n11***22***33");
 
             Assert.Equal(expected, actual);
 
@@ -54,9 +54,9 @@ namespace CSharp_Calculator
         public void Add_Custom_Delimiter_Test_Invalid_Numbers()
         {
 
-            int expected = 20;
+            int expected = 44;
 
-            int actual = Program.Custom_Delimiter("20,abcde");
+            int actual = Program.Custom_Delimiter("//[***]\n11***ascf***33");
 
             Assert.Equal(expected, actual);
 
@@ -65,31 +65,31 @@ namespace CSharp_Calculator
         public void Add_Custom_Delimiter_Test_Invalid_Numbers_Missing_Numbers()
         {
 
-            int expected = 20;
+            int expected = 11;
 
-            int actual = Program.Custom_Delimiter("20,,abcde");
-
-            Assert.Equal(expected, actual);
-
-        }
-        [Fact]
-        public void Add_Custom_Delimiter_Test_New_Line()
-        {
-
-            int expected = 50;
-
-            int actual = Program.Custom_Delimiter("20\n20,10");
+            int actual = Program.Custom_Delimiter("//[***]\n11*** ***abcd");
 
             Assert.Equal(expected, actual);
 
         }
+        // [Fact]
+        // public void Add_Custom_Delimiter_Test_New_Line()
+        // {
+
+        //     int expected = 50;
+
+        //     int actual = Program.Custom_Delimiter("20\n20,10");
+
+        //     Assert.Equal(expected, actual);
+
+        // }
         [Fact]
         public void Add_Custom_Delimiter_Test_With_Missing_Numbers()
         {
 
-            int expected = 20;
+            int expected = 11;
 
-            int actual = Program.Custom_Delimiter("20");
+            int actual = Program.Custom_Delimiter("//[***]\n11");
 
             Assert.Equal(expected, actual);
 
@@ -98,9 +98,9 @@ namespace CSharp_Calculator
         public void Add_Custom_Delimiter_Test_Numbers_Greater_Than_OneThousand()
         {
 
-            int expected = 30;
+            int expected = 44;
 
-            int actual = Program.Custom_Delimiter("20,1001,10");
+            int actual = Program.Custom_Delimiter("//[***]\n11***1001***33");
 
             Assert.Equal(expected, actual);
 
@@ -110,7 +110,7 @@ namespace CSharp_Calculator
         {
 
 
-            Action act = () => Program.Custom_Delimiter("20,1001,-10");
+            Action act = () => Program.Custom_Delimiter("//[***]\n11***22***-33");
             Assert.Throws<ArgumentException>(act);
         }
     }

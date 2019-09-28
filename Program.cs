@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Linq;
 namespace CSharp_Calculator
 {
     class Program
@@ -28,6 +28,35 @@ namespace CSharp_Calculator
                 System.ArgumentException argEx = new System.ArgumentException(ex.Message);
                throw argEx;
             }
+            
+        }
+        public static int Custom_Delimiter(string userInput){
+
+            try{
+                int inputTotal = 0;
+                 if(userInput.IndexOf("//[") > -1){
+                string delimiterString = userInput.Substring(2);
+                string[] delimiter = Utility.Custom_Delimiter_Value(delimiterString);
+                string numberString = Utility.Custom_Delimiter_Number_String_value(delimiterString);
+                string[] userInputArray = numberString.Split(delimiter, StringSplitOptions.None);
+
+                foreach(string x in userInputArray){
+                string value = Utility.Input_Value_Validation(x);               
+                if (int.Parse(value) < 0){
+                 throw new Exception( value + " cannot be used due to being a negative number");
+            
+                }else{
+                    inputTotal += int.Parse(value);
+                }              
+            }
+            return inputTotal;
+            }
+            return inputTotal;
+            }catch(Exception ex){
+                 System.ArgumentException argEx = new System.ArgumentException(ex.Message);
+               throw argEx;
+            }
+           
             
         }
     }
