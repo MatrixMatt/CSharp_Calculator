@@ -5,6 +5,38 @@ namespace CSharp_Calculator
 {
     public class Csharp_Calculator_Custom_Test
     {
+
+        [Fact]
+        public void Add_Custom_Delimiter_Split_One_Value(){
+
+            
+             string[] expected = { "***", "\n" };
+
+            string[] actual = Utility.Custom_Delimiter_Value("[***]\n11***22***33");
+
+            Assert.Equal(expected,actual);
+        }
+        [Fact]
+        public void Add_Custom_Delimiter_Number_String(){
+
+            
+             string expected = "n11***22***33";
+
+            string actual = Utility.Custom_Delimiter_Number_String_value("[***]\n11***22***33");
+
+            Assert.Equal(expected,actual);
+        }
+        [Fact]
+        public void Add_Custom_Delimiter_Split_Multi_Values(){
+
+            
+             string[] expected = { "*", "!!", "r9r" , "\n" };
+             
+
+            string[] actual = Utility.Custom_Delimiter_Value("[*][!!][r9r]\n11r9r22*33!!44");
+
+            Assert.Equal(expected,actual);
+        }
               [Fact]
         public void Add_Custom_Delimiter_Test(){
 
