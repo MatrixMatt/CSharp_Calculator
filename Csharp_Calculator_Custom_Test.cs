@@ -4,7 +4,17 @@ namespace CSharp_Calculator
 {
     public class Csharp_Calculator_Custom_Test
     {
+         [Fact]
+        public void Add_Custom_Delimiter_Split_One_Value_Single_Character()
+        {
 
+
+            char[] expected = { '*', '\n' };
+
+            char[] actual = Utility.Custom_Delimiter_Single_Character_Value("*\n11***22***33");
+
+            Assert.Equal(expected, actual);
+        }
         [Fact]
         public void Add_Custom_Delimiter_Split_One_Value()
         {
