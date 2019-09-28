@@ -22,6 +22,19 @@ namespace CSharp_Calculator
             }
 
         }
+        public static char[] Custom_Delimiter_Single_Character_Value(string input){
+            char output;
+            char[] outputArray;
+            string[] delimiterValue = input.Split('\n');
+            if(delimiterValue.Length > 0){
+                output = char.Parse(delimiterValue[0][0].ToString());
+                 outputArray = new char[] {output, '\n'};
+                return outputArray;
+            }
+             outputArray = new char[] {'\n'};
+            return outputArray;
+            
+        }
         public static string[] Custom_Delimiter_Value(string input)
         {
             string[] output = {"\n"};

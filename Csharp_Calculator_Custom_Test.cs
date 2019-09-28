@@ -15,6 +15,17 @@ namespace CSharp_Calculator
 
             Assert.Equal(expected, actual);
         }
+         [Fact]
+        public void Add_Custom_Delimiter_Split_One_Value_Multi_Character()
+        {
+
+
+            char[] expected = { '*', '\n' };
+
+            char[] actual = Utility.Custom_Delimiter_Single_Character_Value("**\n11***22***33");
+
+            Assert.Equal(expected, actual);
+        }
         [Fact]
         public void Add_Custom_Delimiter_Split_One_Value()
         {
