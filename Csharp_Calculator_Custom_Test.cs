@@ -21,7 +21,7 @@ namespace CSharp_Calculator
         {
 
 
-            string expected = "n11***22***33";
+            string expected = "11***22***33";
 
             string actual = Utility.Custom_Delimiter_Number_String_value("[***]\n11***22***33");
 

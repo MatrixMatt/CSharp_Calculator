@@ -43,5 +43,12 @@ namespace CSharp_Calculator
 
 
         }
+        public static string Custom_Delimiter_Number_String_value(string input){
+            string[] delimValues = input.Split('\n');
+            if(delimValues.Length > 0){
+                return delimValues[1].ToString();
+            }
+            return "";
+        }
     }
 }
