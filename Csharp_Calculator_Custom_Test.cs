@@ -209,5 +209,79 @@ namespace CSharp_Calculator
             Action act = () => Program.Custom_Delimiter("//[*][!!][r9r]\n11r9r22*-33!!44");
             Assert.Throws<ArgumentException>(act);
         }
+          [Fact]
+        public void Add_Custom_Single_Char_Delimiter_Test()
+        {
+
+            int expected = 66;
+
+            int actual = Program.Custom_Delimiter("//*\n11*22*33");
+
+            Assert.Equal(expected, actual);
+
+        }
+        [Fact]
+        public void Add_Custom_Single_Char_Delimiter_Test_Invalid_Numbers()
+        {
+
+            int expected = 44;
+
+            int actual = Program.Custom_Delimiter("//*\n11r9r22*44");
+
+            Assert.Equal(expected, actual);
+
+        }
+        [Fact]
+        public void Add_Custom_Single_Char_Delimiter_Test_Invalid_Numbers_Missing_Numbers()
+        {
+
+            int expected = 55;
+
+            int actual = Program.Custom_Delimiter("//*\n11**44");
+
+            Assert.Equal(expected, actual);
+
+        }
+        [Fact]
+        public void Add_Custom_Single_Char_Delimiter_Test_New_Line()
+        {
+
+            int expected = 76;
+
+            int actual = Program.Custom_Delimiter("//*\n11*33*22\n10");
+
+            Assert.Equal(expected, actual);
+
+        }
+         [Fact]
+        public void Add_Custom_Single_Char_Delimiter_Test_With_Missing_Numbers()
+        {
+
+            int expected = 11;
+
+            int actual = Program.Custom_Delimiter("//*\n11");
+
+            Assert.Equal(expected, actual);
+
+        }
+        [Fact]
+        public void Add_Custom_Single_Char_Delimiter_Test_Numbers_Greater_Than_OneThousand()
+        {
+
+            int expected = 77;
+
+            int actual = Program.Custom_Delimiter("//*\n11*22*1001*44");
+
+            Assert.Equal(expected, actual);
+
+        }
+        [Fact]
+        public void Add_Custom_Single_Char_Delimiter_Test_Numbers_Negative_Numbers()
+        {
+
+
+            Action act = () => Program.Custom_Delimiter("//*\n11*22*-33*44");
+            Assert.Throws<ArgumentException>(act);
+        }
     }
 }
