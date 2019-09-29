@@ -1,12 +1,42 @@
 ﻿using System;
 using System.Linq;
+using System.Text;
 namespace CSharp_Calculator
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            while(true){
+                StringBuilder sb = new StringBuilder();
+            ConsoleKeyInfo inputStringArray;
+            String inputString = "";
+            int output = 0;
+            Console.WriteLine("String Calculator (press esc to exit)");
+            Console.WriteLine("Please enter string:");
+            inputStringArray = Console.ReadKey();
+
+            while(inputStringArray.KeyChar != (char)13){
+                if(inputStringArray.Key == ConsoleKey.Escape){
+                    return;
+                }else{
+                    sb.Append(inputStringArray.KeyChar);
+                inputString += inputStringArray.KeyChar.ToString();
+                inputStringArray = Console.ReadKey();
+                }
+                
+            }
+            
+            inputString = sb.ToString().Replace("\\n","\n");
+            if(inputString.IndexOf("//") > -1){
+                output = Custom_Delimiter(inputString.Trim());
+            }else{
+                output = Simple_Comma_Delimiter(inputString.Trim());
+            }
+
+            Console.WriteLine("\n Your total = {0}", output.ToString());
+            }
+            
         }
 
         public static int Simple_Comma_Delimiter(string userInput){
