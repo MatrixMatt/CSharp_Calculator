@@ -22,22 +22,24 @@ namespace CSharp_Calculator
             }
 
         }
-        public static char[] Custom_Delimiter_Single_Character_Value(string input){
+        public static char[] Custom_Delimiter_Single_Character_Value(string input)
+        {
             char output;
             char[] outputArray;
             string[] delimiterValue = input.Split('\n');
-            if(delimiterValue.Length > 0){
+            if (delimiterValue.Length > 0)
+            {
                 output = char.Parse(delimiterValue[0][0].ToString());
-                 outputArray = new char[] {output, '\n'};
+                outputArray = new char[] { output, '\n' };
                 return outputArray;
             }
-             outputArray = new char[] {'\n'};
+            outputArray = new char[] { '\n' };
             return outputArray;
-            
+
         }
         public static string[] Custom_Delimiter_Value(string input)
         {
-            string[] output = {"\n"};
+            string[] output = { "\n" };
             List<string> delimiterList = new List<string>();
             string[] delimValues = input.Split('\n');
             if (delimValues.Length > 0)
@@ -46,7 +48,7 @@ namespace CSharp_Calculator
                 foreach (System.Text.RegularExpressions.Match match in delimiterMatches)
                 {
                     delimiterList.Add(match.Groups[1].Value);
-                    
+
                 }
                 delimiterList.Add("\n");
                 output = delimiterList.ToArray();
@@ -56,12 +58,15 @@ namespace CSharp_Calculator
 
 
         }
-        public static string Custom_Delimiter_Number_String_value(string input){
+        public static string Custom_Delimiter_Number_String_value(string input)
+        {
             string output = "";
             string[] delimValues = input.Split('\n');
-            if(delimValues.Length > 0){
-                for (int i = 1; i < delimValues.Length; i++){
-                    output += output == ""? delimValues[i].ToString():"\n" + delimValues[i].ToString();
+            if (delimValues.Length > 0)
+            {
+                for (int i = 1; i < delimValues.Length; i++)
+                {
+                    output += output == "" ? delimValues[i].ToString() : "\n" + delimValues[i].ToString();
                 }
                 return output;
             }

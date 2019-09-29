@@ -4,7 +4,7 @@ namespace CSharp_Calculator
 {
     public class Csharp_Calculator_Custom_Test
     {
-         [Fact]
+        [Fact]
         public void Add_Custom_Delimiter_Split_One_Value_Single_Character()
         {
 
@@ -15,7 +15,7 @@ namespace CSharp_Calculator
 
             Assert.Equal(expected, actual);
         }
-         [Fact]
+        [Fact]
         public void Add_Custom_Delimiter_Split_One_Value_Multi_Character()
         {
 
@@ -93,7 +93,7 @@ namespace CSharp_Calculator
             Assert.Equal(expected, actual);
 
         }
-        
+
         [Fact]
         public void Add_Custom_Delimiter_Test_New_Line()
         {
@@ -179,7 +179,7 @@ namespace CSharp_Calculator
             Assert.Equal(expected, actual);
 
         }
-         [Fact]
+        [Fact]
         public void Add_Custom_Multi_Delimiter_Test_With_Missing_Numbers()
         {
 
@@ -209,7 +209,7 @@ namespace CSharp_Calculator
             Action act = () => Program.Custom_Delimiter("//[*][!!][r9r]\n11r9r22*-33!!44");
             Assert.Throws<ArgumentException>(act);
         }
-          [Fact]
+        [Fact]
         public void Add_Custom_Single_Char_Delimiter_Test()
         {
 
@@ -253,7 +253,7 @@ namespace CSharp_Calculator
             Assert.Equal(expected, actual);
 
         }
-         [Fact]
+        [Fact]
         public void Add_Custom_Single_Char_Delimiter_Test_With_Missing_Numbers()
         {
 
